@@ -3,111 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Site Başlığı</title>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- GitHub üzerindeki CSS dosyası -->
+    <link href="https://github.com/vortexvX/my-website/blob/vortexvX.github.io/.github/workflows/styles.css" rel="stylesheet" type="text/css">
+
     <style>
-        /* CSS kodları burada */
-        /* Header */
-        header {
-            background-color: #333;
-            color: white;
+        /* İç stil kodları buraya */
+        #altmenu {
+            position: absolute;
+            display: none;
+            top: -10px;
+            left: 175px;
+        }
+
+        #altmenu>li {
             padding: 10px;
-        }
-
-        .banner {
-            text-align: center;
-        }
-
-        .banner h1 {
-            font-size: 2em;
-        }
-
-        .banner p {
-            font-style: italic;
-        }
-
-        /* Navigation */
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Main Section */
-        main {
-            margin: 20px;
-        }
-
-        section {
-            padding: 10px;
-            background-color: #f0f0f0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        section h2 {
-            font-size: 1.5em;
-            color: #333;
-        }
-
-        section p {
-            line-height: 1.6;
-        }
-
-        section img {
-            max-width: 100%;
-            height: auto;
             display: block;
-            margin: 10px auto;
+            width: 90px;
+            color: #000000;
+            background: #FFFFFF;
+            z-index: 99999999;
+            border-bottom: 1px solid #000;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #4b3535;
-            color: rgb(255, 255, 255);
+        #acil:hover ul {
+            display: block;
+        }
+
+        #acil ul>li:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Banner başlangıcı -->
-        <div class="banner">
-            <h1>Welcome to My Website</h1>
-            <p>This is a banner for my website.</p>
-        </div>
-        <!-- Banner bitişi -->
-
-        <nav>
-            <ul>
-                <li><a href="#">Ana Sayfa</a></li>
-                <li><a href="#">Hakkinda</a></li>
-                <li><a href="#">İletişim</a></li>
+    <div class="project">
+        <div class="menu">
+            <ul style="position: relative;">
+                <li class="logo"><img src="C:\Users\Kullanıcı\Desktop\Klasör\logo.png"></li>
+                <li class="active">Anasayfa</li>
+                <li id="acil">Hizmetler
+                    <ul id="altmenu">
+                        <li><h6>Alt başlık</h6></li>
+                        <li><h6>Alt başlık</h6></li>
+                        <li><h6>Alt Başlık</h6></li>
+                    </ul>
+                </li>
+                <li>Hakkımızda</li>
+                <li>İletişim</li>
+                <li><a href="#" class="kayitol"><span><h4>Kayıt OL</h4></span></a></li>
+                <li><a href="#" class="girisyap"><span><h4>Giriş Yap</h4></span></a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+        <div class="banner" style="margin-top: 50px;">
+            <div class="app-text">
+                <h2>BU BÖLGEYE METİN BAŞLIĞI ATABİLİRSİNİZ.</h2>
+                <p>BU BÖLGEYE YAZI YAZABİLİRSİNİZ.</p>
+            </div>
+            <div class="play-btn">
+                <div class="play-btn-inner"><i class="fa fa-play"></i></div>
+                <small><b>Daha Fazla Bilgi Edinin.</b></small>
+            </div>
+        </div>
+        <div class="app-picture">
+            <img src="C:\Users\Kullanıcı\Desktop\Klasör\mh.jpg">
+        </div>
+    </div>
 
-    <main>
-        <section>
-            <h2>Panel Başlik</h2>
-            <p>Bu paneldeki metin.</p>
-            <img src="images/panel-image.jpg" alt="Panel Image">
-        </section>
-    </main>
+    <div class="quick-links">
+        <ul>
+            <li><i class="fa fa-share-alt"></i><p>Paylaş</p></li>
+            <li><i class="fa fa-bullhorn"></i><p>Duyurular</p></li>
+            <li><i class="fa fa-cog"></i><p>İstatistikler</p></li>
+            <li><i class="fa fa-bell"></i><p>Bildirimler</p></li>
+        </ul>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
-    </footer>
+    <div class="social-icons">
+        <ul>
+            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitch"></i></a></li>
+            <li><a href="#"><i class="fa fa-steam"></i></a></li>
+        </ul>
+    </div>
 </body>
 </html>
