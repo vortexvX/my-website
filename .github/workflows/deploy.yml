@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # İsteğe bağlı olarak kullanacağınız branch adı
+      - main  # Değiştirmek istediğiniz branch adını burada ayarlayabilirsiniz
 
 jobs:
   deploy:
@@ -27,8 +27,9 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
-          git checkout gh-pages  # Eğer farklı bir branch kullanacaksanız, buradaki branch adını ayarlayın
-          cp -r ./build/* .
+          git checkout gh-pages  # Yayınlamak istediğiniz branch'ı burada ayarlayın (örneğin, main veya master)
+          git rm -rf .  # Mevcut içeriği temizleyin
+          cp -r ../build/* .
           git add .
           git commit -m "Deploying to GitHub Pages"
-          git push -f origin gh-pages  # Eğer farklı bir branch kullanacaksanız, buradaki branch adını ayarlayın
+          git push -f origin gh-pages  # Yayınlamak istediğiniz branch'ı burada ayarlayın ve --force flag'i kullanarak push yapın
