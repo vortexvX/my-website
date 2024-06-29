@@ -28,6 +28,19 @@
 .active {
     color: #19dafa !important;
 }
+.content-section {
+    width: 60%; /* İçeriğin genişliği */
+    margin: 0 auto; /* Ortala */
+    text-align: left; /* Metni sol kenara hizala */
+    margin-top: 50px; /* Üstten 50px boşluk bırak */
+}
+
+.content-item {
+    margin-bottom: 20px; /* Her metin parçası arasına 20px boşluk bırak */
+    font-size: 16px; /* Metin boyutu */
+    line-height: 1.6; /* Satır aralığı */
+}
+
 .kayitol {
     top: -15px;
     left: 1300px;
